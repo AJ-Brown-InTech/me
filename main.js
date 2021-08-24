@@ -1,0 +1,26 @@
+var cardData = [
+    {title: "HTML5/CSS3", description: " I USE THESE TECHNOLOGIES TO BRING INNOVATION & STRUCTURE TO BROWSERS, SOME ANIMATIONS TOO"},
+    {title: "JAVASCRIPT", description: " I USE THIS TECHNOLOGY TO CREATE ANIMATIONS AND EFFECTS BUT ALSO HANDLE ALL THAT DATA"},
+    {title: "REACT.JS", description: " I USE THIS TO CREATE DYNAMIC APPLICATIONS"},
+    {title: "NODE/EXPRESS.JS", description: " I USE THIS FRAMEWORK AND RUNTIME FOR WORKING WITH SERVERS AND HANDLING REQUEST"},
+    {title: "GIT", description: " I USE THIS VERSION CONTROL FOR SOURCE CODE MANAGEMENT, GREAT PART IS IT'S BASH IS ALMOST IDENTICAL TO LINUX'S TERMINAL"},
+    {title: "VISUAL STUDIO CODE", description: " THIS IS MY PREFERED INTEGRATED DEVELOPMENT ENVIROMENT"},
+    {title: "LINUX/WINDOWS 10", description: " THESE ARE THE TWO OPERATING SYTEMS I USE, I'VE SETUP THESE ENVIROMENTS ON MY COMPUTERS"},
+    {title: "MONGODB (ATLAS)", description: " I USE THIS NOSQL CLOUD DATABASE FOR DATABASE MANAGEMENT WHEN CONNECTING APP SERVERS"},
+    {title: "HEROKU", description: " I USE THIS TO DEPLOY AND MANAGE WEB APPLICATIONS TECHNOLOGIES TO BRING INNOVATION & STRUCTURE TO BROWSERS"},
+]
+
+var projectData = [
+    {title:}
+]
+
+
+
+function getHTMLForCards(cardData){
+    return ` <div class="card" >
+    <div class="card-body">
+      <h5 class="card-title">${cardData.title}</h5>
+      <p class="card-text">${cardData.description}.</p>
+    </div>
+  </div> `
+}
