@@ -17,10 +17,18 @@ var projectData = [
     {title: "API Book Project", description:" ", photo:"https://www.pexels.com/photo/books-in-black-wooden-book-shelf-159711/", link:"https://github.com/AJ-Brown-InTech/API-Book-Project"},
     {title: "React Portfolio Project", description:" ", photo:"https://images.pexels.com/photos/3597326/pexels-photo-3597326.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", link:"https://ajalanbrown.herokuapp.com/home"},
     {title: "Fashion Website (in-progress)", description:" ",photo: " https://images.pexels.com/photos/1884581/pexels-photo-1884581.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", link:"https://github.com/AJ-Brown-InTech/Website"}
-    
-
 ]
+//Getting the Projects & Cards in our html where we want to place data.
+const projects = document.querySelector('.projects')
+const cards = document.querySelector('.cards')
+//Passing data inherently building each card
+const eachProjectCard = projectData.map( x => getHTMLforProjects(x)).join("")
+const eachSkillCard = cardData.map(x=> getHTMLForCards(x)).join("")
 
+//have html use/build data for each card
+projects.innerHTML(eachProjectCard)
+cards.innerHTML(eachSkillCard)
+//Skill Card build
 function getHTMLForCards(cardData){
     return ` <div class="card" >
     <div class="card-body">
@@ -29,15 +37,13 @@ function getHTMLForCards(cardData){
     </div>
   </div> `
 }
-
+//Project card build
 function getHTMLforProjects(projectData){
-  return `
-  <div class="card" style="width: 18rem;">
+  return ` <div class="card" style="width: 18rem;">
   <img src="${projectData.photo}" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-text">${projectData.title}</h5>
     <p class="card-text">${projectData.description}</p>
   </div>
-</div>
-`
+</div> `
 }
