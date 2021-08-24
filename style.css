@@ -1,6 +1,46 @@
+*{
+    padding:0;
+    margin:0;
+    max-height:fit-content;
+   
+}
+
+a{
+   text-decoration: none;
+}
+
 .carousel-innner, .carousel-item img {
     object-fit: cover;
     object-position: center;
-    height: 50vh;
+    height: 70vh;
     overflow: hidden;
 } 
+
+.title{
+    align-items: center;
+    text-align: center;
+    margin: 2%;
+}
+
+#about{
+padding: 1rem;
+}
+.about-img{
+    min-width: 30%;
+    height:50%
+}
+
+.about-container{
+padding:2rem;
+}
+
+
+.about-article{
+display:flex;
+max-width: 90%;
+padding:5rem;
+}
+
+p.para{
+   padding: 1rem
+}
