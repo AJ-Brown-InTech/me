@@ -1,3 +1,6 @@
+/*Projects and Skills*/
+
+
 var cardData = [
     {title: "HTML5/CSS3", description: " I USE THESE TECHNOLOGIES TO BRING INNOVATION & STRUCTURE TO BROWSERS, SOME ANIMATIONS TOO"},
     {title: "JAVASCRIPT", description: " I USE THIS TECHNOLOGY TO CREATE ANIMATIONS AND EFFECTS BUT ALSO HANDLE ALL THAT DATA"},
@@ -18,7 +21,7 @@ var projectData = [
     {title: "React Portfolio Project", description:" ", photo:"https://images.pexels.com/photos/3597326/pexels-photo-3597326.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", link:"https://ajalanbrown.herokuapp.com/home"},
     {title: "Fashion Website (in-progress)", description:" ",photo: " https://images.pexels.com/photos/1884581/pexels-photo-1884581.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", link:"https://github.com/AJ-Brown-InTech/Website"}
 ]
-
+//Skill card build
 function getHTMLForCards(cardData){
     return ` <div class="card" >
     <div class="card-body">
@@ -48,4 +51,46 @@ const eachSkillCard = cardData.map(x=> getHTMLForCards(x)).join("")
 //have html use/build data for each card
 projects.innerHTML = (eachProjectCard)
 cards.innerHTML = (eachSkillCard)
-//Skill Card build
+
+
+
+
+/*navbar animation and navigation effects */
+
+//gettig the areas im working with
+const navbarlinks = document.querySelectorAll( 'nav-item a')
+const navbarMenu = document.querySelector('nav ul')
+const navbarToggler = document.querySelector('.touch')
+
+
+navbarToggler,addEventListener('click', navbarTogglerClick)
+
+function navbarTogglerClick(){
+  navbarToggler.classList.toggle("open-navbar-toggler")
+  navbarMenu.classList.toggle("open")
+}
+
+navbarlinks.forEach(element => element.addEventListener('click', navbarlinksClick))
+
+function navbarlinksClick (event) {
+
+ smoothScroll(event)//call the smooth scroll func
+
+
+  if(navbarMenu.classList.contains('open')) { //close the navbar when the screen is smaller
+    navbarToggler.click()
+  }
+}
+
+ function smoothScroll (event){
+  event.preventDefault()
+    const targetId =  event.currentTarget.getAttribute("href =") === "#" ? "section": event.currentTarget.getAttribute('href')
+console.log(targetId)
+   document.querySelector.targetId.scrollIntoView(
+     {behavior: "smooth", 
+     block: "start"
+   })
+ }
+
+
+
