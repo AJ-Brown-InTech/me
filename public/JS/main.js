@@ -14,21 +14,11 @@ var projectData = [
     {title: "Weather API", description:" ", photo:"https://images.pexels.com/photos/125510/pexels-photo-125510.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", link:"https://github.com/AJ-Brown-InTech/Weather-API"},
     {title: "Burger API Build", description:" ", photo:"https://images.pexels.com/photos/3861943/pexels-photo-3861943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", link:"https://github.com/AJ-Brown-InTech/Burger-API-Build"},
     {title: "Basic Node Server", description:" ", photo:"https://images.pexels.com/photos/4508751/pexels-photo-4508751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", link:"https://github.com/AJ-Brown-InTech/Node.js-Server"},
-    {title: "API Book Project", description:" ", photo:"https://www.pexels.com/photo/books-in-black-wooden-book-shelf-159711/", link:"https://github.com/AJ-Brown-InTech/API-Book-Project"},
+    {title: "API Book Project", description:" ", photo:"https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"},
     {title: "React Portfolio Project", description:" ", photo:"https://images.pexels.com/photos/3597326/pexels-photo-3597326.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", link:"https://ajalanbrown.herokuapp.com/home"},
     {title: "Fashion Website (in-progress)", description:" ",photo: " https://images.pexels.com/photos/1884581/pexels-photo-1884581.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", link:"https://github.com/AJ-Brown-InTech/Website"}
 ]
-//Getting the Projects & Cards in our html where we want to place data.
-const projects = document.querySelector('.projects')
-const cards = document.querySelector('.cards')
-//Passing data inherently building each card
-const eachProjectCard = projectData.map( x => getHTMLforProjects(x)).join("")
-const eachSkillCard = cardData.map(x=> getHTMLForCards(x)).join("")
 
-//have html use/build data for each card
-projects.innerHTML(eachProjectCard)
-cards.innerHTML(eachSkillCard)
-//Skill Card build
 function getHTMLForCards(cardData){
     return ` <div class="card" >
     <div class="card-body">
@@ -47,3 +37,15 @@ function getHTMLforProjects(projectData){
   </div>
 </div> `
 }
+
+//Getting the Projects & Cards in our html where we want to place data.
+const projects = document.querySelector('.projects')
+const cards = document.querySelector('.cards')
+//Passing data inherently building each card
+const eachProjectCard = projectData.map( x => getHTMLforProjects(x)).join("")
+const eachSkillCard = cardData.map(x=> getHTMLForCards(x)).join("")
+
+//have html use/build data for each card
+projects.innerHTML = (eachProjectCard)
+cards.innerHTML = (eachSkillCard)
+//Skill Card build
