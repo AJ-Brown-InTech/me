@@ -109,13 +109,14 @@ console.log(targetId)
 function scrollAppearTwo(){
    let secondText = document.querySelector('.two')
    let myCurrentPosition = secondText.getBoundingClientRect().top
-   let screenPosition = window.innerHeight 
+   let screenPosition = window.innerHeight/2
 
    if(myCurrentPosition < screenPosition){
     secondText.classList.add('view-appear')
   } 
 }   
 window.addEventListener('scroll', scrollAppearTwo)
+
 
 function scrollAppearThree(){
   let thirdText = document.querySelector('.three')
@@ -128,5 +129,8 @@ function scrollAppearThree(){
   
 }
 window.addEventListener('scroll', scrollAppearThree)
+
+
+
 
 

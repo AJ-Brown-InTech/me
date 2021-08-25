@@ -47,9 +47,6 @@ p.para{
    padding: 2rem
 }
 
-
-
-
 .one {
     width:100%;
     opacity: 0;
@@ -67,19 +64,31 @@ p.para{
 .three{
     width:100%;
     opacity: 0;
-    transform: translateY(-30px);
-    transition: 1.8s ease-in-out;
+    transform: translateY(0px);
+    transition: 2s ease-in;
 }
 .view-appear{
 opacity: 1;
 transform: translateY(0px)
 }
 
-
-
-
-
-
+ #portfolio {
+    padding:10rem;
+    text-align: center;
+}
+.projects{
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+.cards{
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ grid-template-rows: repeat(3, 1fr); 
+}
 
 
 
@@ -100,29 +109,29 @@ svg{
     margin:0;
     overflow: visible;
     transform: translate(-10%, -10%);
-    animation: 5s pulse-animation linear infinite
+    animation: .5s pulse-animation linear infinite
     
 }
 @keyframes pulse-animation {
     0%{
-        opacity: 0.8;
+        opacity: 1;
         transform: scale(1)
     }
     25%{
-        opacity: 0.6;
-        transform: scale(1.4)
+        opacity: 0.8;
+        transform: scale(1.5)
     }
     50%{
         opacity: 0.4;
-        transform: scale(1.8)
+        transform: scale(1.7)
     }
     75%{
         opacity: 0.2;
-        transform: scale(2.4)
+        transform: scale(2)
     }
     100%{
         opacity: 0;
-        transform: scale(2.6)
+        transform: scale(2.4)
     }
     
 }
