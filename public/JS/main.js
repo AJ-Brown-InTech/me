@@ -22,20 +22,22 @@ var projectData = [
 ]
 //Skill card build
 function getHTMLForCards(cardData){
-    return ` <div class="card" >
+    return ` <div class="card each-skill" ; >
     <div class="card-body">
       <h5 class="card-title">${cardData.title}</h5>
       <p class="card-text">${cardData.description}.</p>
+      
     </div>
   </div> `
 }
 //Project card build
 function getHTMLforProjects(projectData){
-  return ` <div class="card" style="width: 18rem;">
+  return ` <div class="card each-project" style="min-width: 25rem;">
   <img src="${projectData.photo}" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-text">${projectData.title}</h5>
     <p class="card-text">${projectData.description}</p>
+    <subcript><a href ="${projectData.link}">Learn More</a></subscript>
   </div>
 </div> `
 }
