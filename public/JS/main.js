@@ -1,11 +1,4 @@
-
-
-
- 
-
 /*Projects and Skills*/
-
-
 
 var cardData = [
     {title: "HTML5/CSS3", description: " I USE THESE TECHNOLOGIES TO BRING INNOVATION & STRUCTURE TO BROWSERS, SOME ANIMATIONS TOO"},
@@ -91,7 +84,6 @@ console.log(targetId)
      {behavior: "smooth", 
      block: "start"
    })
-
   }
   
   function scrollAppearOne(){
@@ -103,7 +95,6 @@ console.log(targetId)
       introText.classList.add('view-appear')
     } 
    }
-
    window.addEventListener('scroll', scrollAppearOne)
 
 function scrollAppearTwo(){
@@ -126,11 +117,10 @@ function scrollAppearThree(){
   if(myCurrentPosition < screenPosition){
    thirdText.classList.add('view-appear')
  } 
-  
 }
 window.addEventListener('scroll', scrollAppearThree)
 
-
+document.querySelector('.touch').style.opacity = "0"
 
 
 

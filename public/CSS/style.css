@@ -14,37 +14,44 @@ a{
 .carousel-innner, .carousel-item img {
     object-fit: cover;
     object-position: center;
-    height: 70vh;
+    height: 80vh;
     overflow: hidden;
+    
 } 
 
 .title{
     align-items: center;
     text-align: center;
-    margin: 2%;
+    margin-top: 5%;
+    font-size: 600%;
 }
 
-#about{
-padding: 1rem;
-}
 .about-img{
-    min-width: 30%;
-    height:50%
+    min-width: 10%;
+    height:30%;
+    border: 1px solid rgb(206, 201, 201);
+
 }
 
 .about-container{
-padding:2rem;
+    padding: 1rem;
+    align-content: center;
+    
 }
 
 
 .about-article{
 display:flex;
-max-width: 90%;
 padding:5rem;
+
 }
 
 p.para{
-   padding: 2rem
+   padding-left: 4rem;
+   padding-right: 3rem;
+   font-size: large;
+   margin-bottom: 0%;
+   display:block
 }
 
 .one {
@@ -72,23 +79,6 @@ opacity: 1;
 transform: translateY(0px)
 }
 
- #portfolio {
-    padding:10rem;
-    text-align: center;
-}
-.projects{
-    align-items: center;
-    align-content: center;
-    text-align: center;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-}
-.cards{
- display: grid;
- grid-template-columns: repeat(3, 1fr);
- grid-template-rows: repeat(3, 1fr); 
-}
 
 
 
