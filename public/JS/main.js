@@ -1,4 +1,10 @@
+
+
+
+ 
+
 /*Projects and Skills*/
+
 
 
 var cardData = [
@@ -52,16 +58,12 @@ const eachSkillCard = cardData.map(x=> getHTMLForCards(x)).join("")
 projects.innerHTML = (eachProjectCard)
 cards.innerHTML = (eachSkillCard)
 
-
-
-
 /*navbar animation and navigation effects */
 
 //gettig the areas im working with
 const navbarlinks = document.querySelectorAll( 'nav-item a')
 const navbarMenu = document.querySelector('nav ul')
 const navbarToggler = document.querySelector('.touch')
-
 
 navbarToggler,addEventListener('click', navbarTogglerClick)
 
@@ -76,7 +78,6 @@ function navbarlinksClick (event) {
 
  smoothScroll(event)//call the smooth scroll func
 
-
   if(navbarMenu.classList.contains('open')) { //close the navbar when the screen is smaller
     navbarToggler.click()
   }
@@ -84,13 +85,48 @@ function navbarlinksClick (event) {
 
  function smoothScroll (event){
   event.preventDefault()
-    const targetId =  event.currentTarget.getAttribute("href =") === "#" ? "section": event.currentTarget.getAttribute('href')
+    const targetId =  event.currentTarget.getAttribute('href') === "#" ? "section id": event.currentTarget.getAttribute('href')
 console.log(targetId)
    document.querySelector.targetId.scrollIntoView(
      {behavior: "smooth", 
      block: "start"
    })
- }
 
+  }
+  
+  function scrollAppearOne(){
+    let introText =  document.querySelector('.one')
+    let introPosition = introText.getBoundingClientRect().top
+    let screenPosition = window.innerHeight / 2
+   
+    if(introPosition < screenPosition){
+      introText.classList.add('view-appear')
+    } 
+   }
+
+   window.addEventListener('scroll', scrollAppearOne)
+
+function scrollAppearTwo(){
+   let secondText = document.querySelector('.two')
+   let myCurrentPosition = secondText.getBoundingClientRect().top
+   let screenPosition = window.innerHeight 
+
+   if(myCurrentPosition < screenPosition){
+    secondText.classList.add('view-appear')
+  } 
+}   
+window.addEventListener('scroll', scrollAppearTwo)
+
+function scrollAppearThree(){
+  let thirdText = document.querySelector('.three')
+  let myCurrentPosition = thirdText.getBoundingClientRect().top
+  let screenPosition = window.innerHeight 
+
+  if(myCurrentPosition < screenPosition){
+   thirdText.classList.add('view-appear')
+ } 
+  
+}
+window.addEventListener('scroll', scrollAppearThree)
 
 
