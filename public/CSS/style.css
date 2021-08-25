@@ -1,10 +1,15 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  box-sizing:inherit;
   scroll-behavior: smooth;
-}
 
+  
+
+}
+ main{
+  justify-content: space-evenly;
+ }
 a {
   text-decoration: none;
 }
@@ -13,8 +18,10 @@ a {
 .carousel-item img {
   object-fit: cover;
   object-position: center;
-  height: 80vh;
+  height: 70vh;
+  
   overflow: hidden;
+
 }
 
 .title {
@@ -33,7 +40,7 @@ a {
 }
 
 .about-container {
-  padding: 1rem;
+  padding-bottom: 1rem;
   align-content: center;
 }
 
@@ -50,25 +57,53 @@ p.para {
   display: block;
 }
 
-
+#portfolio{
+    width:100vw;
+}
 .portfolio-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    
+    
     
 }
-.projects {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+.projects{
+display:grid;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows:auto;
+margin: 5%;
 
-.cards {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  width: 100%;
+}
+.each-project{
+    margin: 2%;
+    padding: 2%;
 }
 
+
+.cards{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows:auto;
+  margin: 5%;
+ 
+ 
+}
+.each-skill{
+  margin-bottom: 2%;
+  margin-top: 2%;
+  background-color: #9b3636;
+  color: #e2c6c6;
+  width:  58%;
+  align-items: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+
+}
+.card{
+    border: solid rgb(189, 181, 181) 1px;
+    
+}
 .one {
   width: 100%;
   opacity: 0;
@@ -98,7 +133,7 @@ p.para {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10%;
+
 }
 #color {
   transform: translate(-10%, -10%);
